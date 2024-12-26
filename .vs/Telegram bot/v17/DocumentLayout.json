@@ -3,11 +3,16 @@
   "WorkspaceRootPath": "E:\\projects\\Telegram_bot\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{34B59F28-4BCE-42AC-BFC1-C58B017977D3}|Telegram bot.csproj|e:\\projects\\telegram_bot\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B59F28-4BCE-42AC-BFC1-C58B017977D3}|Telegram bot.csproj|solutionrelative:messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34B59F28-4BCE-42AC-BFC1-C58B017977D3}|Telegram bot.csproj|e:\\projects\\telegram_bot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34B59F28-4BCE-42AC-BFC1-C58B017977D3}|Telegram bot.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\projects\\tg_bot\\2nd try\\Tg_bot_2nd_try\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34B59F28-4BCE-42AC-BFC1-C58B017977D3}|Telegram bot.csproj|e:\\projects\\telegram_bot\\telegrambotsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B59F28-4BCE-42AC-BFC1-C58B017977D3}|Telegram bot.csproj|solutionrelative:telegrambotsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,29 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\projects\\tg_bot\\2nd try\\Tg_bot_2nd_try\\Program.cs",
-              "RelativeDocumentMoniker": "..\\tg_bot\\2nd try\\Tg_bot_2nd_try\\Program.cs",
-              "ToolTip": "E:\\projects\\tg_bot\\2nd try\\Tg_bot_2nd_try\\Program.cs",
-              "RelativeToolTip": "..\\tg_bot\\2nd try\\Tg_bot_2nd_try\\Program.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAUwHgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TelegramBotSettings.cs",
+              "DocumentMoniker": "E:\\projects\\Telegram_bot\\TelegramBotSettings.cs",
+              "RelativeDocumentMoniker": "TelegramBotSettings.cs",
+              "ToolTip": "E:\\projects\\Telegram_bot\\TelegramBotSettings.cs",
+              "RelativeToolTip": "TelegramBotSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:05:19.153Z"
+              "WhenOpened": "2024-12-26T07:54:39.602Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "E:\\projects\\Telegram_bot\\Messages.cs",
+              "RelativeDocumentMoniker": "Messages.cs",
+              "ToolTip": "E:\\projects\\Telegram_bot\\Messages.cs",
+              "RelativeToolTip": "Messages.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAwDAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T07:35:14.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\projects\\Telegram_bot\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\projects\\Telegram_bot\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwHgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T13:04:59.006Z",
               "EditorCaption": ""
