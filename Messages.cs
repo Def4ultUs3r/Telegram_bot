@@ -7,6 +7,8 @@ using System.Diagnostics.Metrics;
 //using Telegram.Bots.Types;
 //using Telegram.Bots.Types;
 //using Telegram.Bots.Types;
+//using Telegram.Bots.Types;
+//using Telegram.Bots.Types;
 
 namespace Telegram_bot
 {
@@ -62,7 +64,7 @@ namespace Telegram_bot
                     case "training":
                         {
                             Console.WriteLine("training");
-                            string telegramMessage = "Підготовчі курси:\n";
+                            string telegramMessage = "Звертайтесь за номером телефону\nта записуйтесь на підготовчі курси";
 
                             var filePath = Path.Combine("Resources", "training.jpg");
 
@@ -75,11 +77,20 @@ namespace Telegram_bot
                                     cancellationToken: cancellationToken
                                 );
                             }
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
                         }
                         break;
 
                     case "main_menu":
                         SendInline(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken: cancellationToken);
+                        break;
+
+                    case "contacts":
+                        {
+                            string tMessage = "Адреса коледжу:\n49000, м.Дніпро, провулок Ушинського, 3\n(біля стадіону «Дніпро-Арена»)\n\nЕлектронна адреса:\ndvnz_dktd@ukr.net\n\nЕлектронна адреса приймальної комісії:\n\nvstupdfktd@gmail.com \n\nКонтактні телефони (код міста – 56):\n\nПриймальна комісія – (098) 463-83-32\nПриймальна директора – (056) 375-77-50\n";
+                            await botClient.SendMessage(chatId: update.CallbackQuery.Message.Chat.Id, tMessage, parseMode: Telegram.Bot.Types.Enums.ParseMode.Html);
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
+                        }
                         break;
 
                     case "map":
@@ -107,7 +118,7 @@ namespace Telegram_bot
                         {
                             Console.WriteLine("You press button 2");
                             string telegramMessage = "Виберіть спеціальність:";
-                            // await botClient.SendTextMessageAsync(chatId: update.CallbackQuery.Message.Chat.Id, telegramMessage, parseMode: Telegram.Bot.Types.Enums.ParseMode.Html);
+                            // await botClient.SendTextMessage(chatId: update.CallbackQuery.Message.Chat.Id, telegramMessage, parseMode: Telegram.Bot.Types.Enums.ParseMode.Html);
 
                             Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup inlineKeyBoard = new Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup(
                                 new[]
@@ -123,13 +134,123 @@ namespace Telegram_bot
 
                                 });
 
-                            
+
                             await _bot.EditMessageText(update.CallbackQuery.Message.Chat.Id, update.CallbackQuery.Message.MessageId, telegramMessage, replyMarkup: inlineKeyBoard, parseMode: Telegram.Bot.Types.Enums.ParseMode.Html);
                         }
                         break;
 
-                    case "post3":
-                        SendInline(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken: cancellationToken);
+                    case "door":
+                        {
+                            Console.WriteLine("door");
+                            string telegramMessage = "Приходьте на дні відкритих дверей\nі дізнавайтесь більше про навчання в нас!";
+
+                            var filePath = Path.Combine("Resources", "door.jpg");
+
+                            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                            {
+                                await botClient.SendPhoto(
+                                    chatId: update.CallbackQuery.Message.Chat.Id,
+                                    photo: InputFile.FromStream(stream, "door.jpg"),
+                                    caption: telegramMessage,
+                                    cancellationToken: cancellationToken
+                                );
+                            }
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
+                        }
+
+                        break;
+
+                    case "plan":
+                        {
+                            Console.WriteLine("plan");
+                            string telegramMessage = "Графік навчання\n";
+
+                            var filePath = Path.Combine("Resources", "plan.png");
+
+                            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                            {
+                                await botClient.SendPhoto(
+                                    chatId: update.CallbackQuery.Message.Chat.Id,
+                                    photo: InputFile.FromStream(stream, "plan.png"),
+                                    caption: telegramMessage,
+                                    cancellationToken: cancellationToken
+                                );
+                            }
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
+                        }
+
+                        break;
+
+                    case "time":
+                        {
+                            Console.WriteLine("time");
+                            string telegramMessage = "Розклад дзвінків\n";
+
+                            var filePath = Path.Combine("Resources", "time.jpg");
+
+                            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                            {
+                                await botClient.SendPhoto(
+                                    chatId: update.CallbackQuery.Message.Chat.Id,
+                                    photo: InputFile.FromStream(stream, "time.jpg"),
+                                    caption: telegramMessage,
+                                    cancellationToken: cancellationToken
+                                );
+                            }
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
+                        }
+
+                        break;
+
+                    case "schedule":
+                        {
+                            Console.WriteLine("schedule");
+                            string telegramMessage = "Розклад занять II семестр 2024-2025нр\n";
+
+                            var filePath = Path.Combine("Resources", "Розклад занять II семестр 2024-2025нр.pdf");
+
+                            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                            {
+                                await botClient.SendDocument(
+                                    chatId: update.CallbackQuery.Message.Chat.Id,
+                                    document: InputFile.FromStream(stream, "Розклад занять II семестр 2024-2025нр.pdf"),
+                                    caption: telegramMessage,
+                                    cancellationToken: cancellationToken
+                                );
+                            }
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
+                        }
+
+                        break;
+
+                    case "money":
+                        {
+                            Console.WriteLine("money");
+                            var files = new string[]
+                            {
+                                Path.Combine(AppContext.BaseDirectory, "Resources", "Гуртожитки.pdf"),
+                                Path.Combine(AppContext.BaseDirectory, "Resources", "Навчання.pdf"),
+                                Path.Combine(AppContext.BaseDirectory, "Resources", "Підготовчі курси.pdf")
+                            };
+
+
+
+
+                            foreach (var filePath in files)
+                            {
+                                using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                                {
+                                    await botClient.SendDocument(
+                                        chatId: update.CallbackQuery.Message.Chat.Id,
+                                        document: InputFile.FromStream(stream, Path.GetFileName(filePath)),
+                                        caption: $"{Path.GetFileName(filePath)}"
+                                    );
+                                }
+                            }
+
+
+                            ShowMainMenuButton(botClient: botClient, chatId: update.CallbackQuery.Message.Chat.Id, cancellationToken);
+                        }
                         break;
 
                     default:

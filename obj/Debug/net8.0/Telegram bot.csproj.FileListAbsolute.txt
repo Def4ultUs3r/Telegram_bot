@@ -46,3 +46,11 @@ E:\projects\Telegram_bot\obj\Debug\net8.0\refint\Telegram bot.dll
 E:\projects\Telegram_bot\obj\Debug\net8.0\Telegram bot.pdb
 E:\projects\Telegram_bot\obj\Debug\net8.0\Telegram bot.genruntimeconfig.cache
 E:\projects\Telegram_bot\obj\Debug\net8.0\ref\Telegram bot.dll
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\door.jpg
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\plan.png
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\time.jpg
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\training.jpg
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\Гуртожитки.pdf
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\Навчання.pdf
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\Підготовчі курси.pdf
+E:\projects\Telegram_bot\bin\Debug\net8.0\Resources\Розклад занять II семестр 2024-2025нр.pdf
